@@ -1,0 +1,12 @@
+<Page x:Class="BCPASystem.SelectShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"  
+        Title="Bucks Centre for Performing Arts" Height="350" Width="525" Background="White">
+    <Grid>
+        <Image Margin="109,15,109,245" Source="/Assets/BCPA_Logo.png"/>
+        <Label Content="All Shows" FontSize="20" HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top"/>
+        <Label Content="No Shows Available" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top"/>
+        <syncfusion:ButtonAdv Content="AdminMode" Click="OnAdminModeButtonClick" HorizontalAlignment="Left" Height="22" Label="Admin Mode" Margin="405,15,0,0" VerticalAlignment="Top" Width="106" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14" IconStretch="None"/>
+    </Grid>
+</Page>

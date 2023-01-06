@@ -1,0 +1,9 @@
+<Window x:Class="BCPASystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"  
+        Title="Bucks Centre for Performing Arts" Height="350" Width="525" Icon="App.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Frame x:Name="PageFrame" Content="Frame" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/BCPASystem;component/CustomerDetails.xaml" NavigationUIVisibility="Hidden" Width="525" Height="350" Margin="0,-16,0,0"/>
+    </Grid>
+</Window>
