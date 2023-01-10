@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,9 +18,9 @@ using Syncfusion.SfSkinManager;
 namespace BCPASystem
 {
     /// <summary>
-    /// Interaction logic for SelectShow.xaml
+    /// Interaction logic for NewShow.xaml
     /// </summary>
-    public partial class SelectShow : Page
+    public partial class NewPromotion : Page
     {
 		#region Fields
         private string currentVisualStyle;
@@ -62,11 +64,10 @@ namespace BCPASystem
             }
         }
         #endregion
-        public SelectShow()
+        public NewPromotion()
         {
             InitializeComponent();
 			this.Loaded += OnLoaded;
-            showListView.ItemsSource = ShowInfo.Shows;
         }
 		/// <summary>
         /// Called when [loaded].
@@ -109,9 +110,18 @@ namespace BCPASystem
                 SfSkinManager.ApplyStylesOnApplication = false;
             }
         }
-        private void OnAdminModeButtonClick(object sender, RoutedEventArgs e)
+        public void OnCreatePromotionButtonClick(object sender, RoutedEventArgs e)
         {
-            AdminMode page = new AdminMode();
+            PromotionInfo.Promotions.Add(new Promotion()
+            {
+                Identifier = promoNameField.Text,
+                SeniorPrice = (double)seniorPriceField.Value,
+                AdultPrice = (double)adultPriceField.Value,
+                StudentPrice = (double)studentPriceField.Value,
+                ChildPrice = (double)childPriceField.Value,
+            });
+            Trace.WriteLine(PromotionInfo.Promotions);
+            SelectShow page = new SelectShow();
             NavigationService.Navigate(page);
         }
     }

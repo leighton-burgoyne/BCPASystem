@@ -1,12 +1,28 @@
-<Page x:Class="BCPASystem.SelectShow"
+<Page
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"  
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:BCPASystem" mc:Ignorable="av" x:Class="BCPASystem.SelectShow"  
         Title="Bucks Centre for Performing Arts" Height="350" Width="525" Background="White">
     <Grid>
         <Image Margin="109,15,109,245" Source="/Assets/BCPA_Logo.png"/>
         <Label Content="All Shows" FontSize="20" HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top"/>
-        <Label Content="No Shows Available" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top"/>
-        <syncfusion:ButtonAdv Content="AdminMode" Click="OnAdminModeButtonClick" HorizontalAlignment="Left" Height="22" Label="Admin Mode" Margin="405,15,0,0" VerticalAlignment="Top" Width="106" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14" IconStretch="None"/>
+        <syncfusion:ButtonAdv Content="AdminMode" Click="OnAdminModeButtonClick" HorizontalAlignment="Left" Height="22" Label="Admin Mode" Margin="404,23,0,0" VerticalAlignment="Top" Width="106" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14" IconStretch="None"/>
+
+        <ListView x:Name="showListView" Margin="10,131,10,22" ScrollViewer.CanContentScroll="False">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Show Name" Width="80" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Show Description" Width="160" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Header="Show Date" Width="80" DisplayMemberBinding="{Binding ShowDate}"/>
+                    <GridViewColumn Header="Show Time" Width="80" DisplayMemberBinding="{Binding ShowTime}"/>
+                    <GridViewColumn Header="Venue" Width="80" DisplayMemberBinding="{Binding Venue}"/>
+                    <GridViewColumn Header="Organiser" Width="80" DisplayMemberBinding="{Binding Organiser}"/>
+                    <GridViewColumn Header="Costs" Width="80" DisplayMemberBinding="{Binding Promotion}"/>
+                    <GridViewColumn Header="Duration" Width="80" DisplayMemberBinding="{Binding Duration}"/>
+                    <GridViewColumn Header="Capacity" Width="80" DisplayMemberBinding="{Binding Capacity}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

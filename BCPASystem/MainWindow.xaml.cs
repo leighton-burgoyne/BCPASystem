@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BCPA;
 using Syncfusion.SfSkinManager;
 
 namespace BCPASystem
@@ -22,7 +21,6 @@ namespace BCPASystem
     public partial class MainWindow : Window
     {
         public static List<Customer> customerData = new List<Customer>();
-        public static List<Show> showData = new List<Show>();
         public static List<Promotion> promotionData = new List<Promotion>();
         #region Fields
         private string currentVisualStyle;
@@ -74,8 +72,8 @@ namespace BCPASystem
 		/// <summary>
         /// Called when [loaded].
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param Name="sender">The sender.</param>
+        /// <param Name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             CurrentVisualStyle = "Windows11Light";

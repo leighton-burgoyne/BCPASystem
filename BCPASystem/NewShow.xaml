@@ -14,17 +14,21 @@
         <Label Content="Capacity" HorizontalAlignment="Left" Margin="282,169,0,0" VerticalAlignment="Top"/>
         <Label Content="Start Time" HorizontalAlignment="Left" Margin="82,232,0,0" VerticalAlignment="Top"/>
         <Label Content="Duration (mins)" HorizontalAlignment="Left" Margin="55,263,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfDatePicker AllowNull="True" HorizontalAlignment="Left" Height="22" Margin="152,203,0,0" VerticalAlignment="Top" Watermark="Select Date" Width="120"/>
-        <syncfusion:ButtonAdv Content="CreateShow" HorizontalAlignment="Center" Height="22" Label="Create Show" Margin="0,301,0,0" VerticalAlignment="Top" Width="123" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14"/>
-        <syncfusion:SfTimePicker AllowNull="True" HorizontalAlignment="Left" Height="22" Margin="152,234,0,0" VerticalAlignment="Top" Watermark="Select Time" Width="120"/>
-        <syncfusion:IntegerTextBox HorizontalAlignment="Left" Height="22" Margin="152,265,0,0" TextWrapping="Wrap" Text="IntegerTextBox" UseNullOption="True" VerticalAlignment="Top" WatermarkText="Enter Duration (mins)" Width="120" WatermarkTextIsVisible="True"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="86" Margin="318,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Watermark="Enter a Description" Width="144"/>
-        <Label Content="Info" HorizontalAlignment="Left" Margin="282,201,0,0" VerticalAlignment="Top"/>
-        <syncfusion:IntegerTextBox HorizontalAlignment="Left" Height="22" Margin="342,172,0,0" TextWrapping="Wrap" Text="IntegerTextBox" UseNullOption="True" VerticalAlignment="Top" WatermarkText="Enter Capacity" Width="120"/>
-        <syncfusion:ComboBoxAdv AllowMultiSelect="True" DefaultText="Select Venue" Margin="342,143,63,185">
+        <syncfusion:SfDatePicker x:Name="StartDateField" AllowNull="True" HorizontalAlignment="Left" Height="22" Margin="152,203,0,0" VerticalAlignment="Top" Watermark="Select Date" Width="120"/>
+        <syncfusion:ButtonAdv Content="CreateShow" Click="OnCreateShowButtonClick" HorizontalAlignment="Center" Height="22" Label="Create Show" Margin="0,301,0,0" VerticalAlignment="Top" Width="123" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14"/>
+        <syncfusion:SfTimePicker  x:Name="StartTimeField" AllowNull="True" HorizontalAlignment="Left" Height="22" Margin="152,234,0,0" VerticalAlignment="Top" Watermark="Select Time" Width="120" FormatString="HH:mm"/>
+        <syncfusion:IntegerTextBox  x:Name="DurationField" HorizontalAlignment="Left" Height="22" Margin="152,265,0,0" TextWrapping="Wrap" Text="IntegerTextBox" UseNullOption="True" VerticalAlignment="Top" WatermarkText="Enter Duration" Width="120" WatermarkTextIsVisible="True"/>
+        <syncfusion:SfTextBoxExt  x:Name="InfoField" HorizontalAlignment="Left" Height="53" Margin="342,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Watermark="Enter a Description" FontSize="9" Width="120"/>
+        <Label Content="Info" HorizontalAlignment="Left" Margin="306,201,0,0" VerticalAlignment="Top"/>
+        <syncfusion:IntegerTextBox  x:Name="CapacityField" HorizontalAlignment="Left" Height="22" Margin="342,172,0,0" TextWrapping="Wrap" Text="IntegerTextBox" UseNullOption="True" VerticalAlignment="Top" WatermarkText="Enter Capacity" Width="120"/>
+        <syncfusion:ComboBoxAdv  x:Name="VenueField" AllowMultiSelect="False" DefaultText="Select Venue" Margin="342,143,63,185">
             <syncfusion:ComboBoxItemAdv Content="BCPA"/>
         </syncfusion:ComboBoxAdv>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="ShowNameField" HorizontalAlignment="Left" Height="18" Margin="152,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="OrganiserField" HorizontalAlignment="Left" Height="18" Margin="152,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Promotion" HorizontalAlignment="Left" Margin="271,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.459,0.323"/>
+        <syncfusion:ComboBoxAdv x:Name="PromotionField" AllowMultiSelect="False" DefaultText="Select Promotion" Margin="342,265,63,63">
+            <syncfusion:ComboBoxItemAdv Content="Standard"/>
+        </syncfusion:ComboBoxAdv>
     </Grid>
 </Page>

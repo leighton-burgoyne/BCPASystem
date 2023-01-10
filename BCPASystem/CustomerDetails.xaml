@@ -6,22 +6,22 @@
     <Grid>
         <Image Margin="109,15,109,245" Source="/Assets/BCPA_Logo.png"/>
         <Label Content="Confirm your Details" FontSize="20" HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="firstNameField" HorizontalAlignment="Left" Height="18" Margin="152,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="80,139,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="355,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="lastNameField" HorizontalAlignment="Left" Height="18" Margin="355,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Last Name" HorizontalAlignment="Left" Margin="284,139,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="addressLine1Field" HorizontalAlignment="Left" Height="18" Margin="152,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Address Line 1" HorizontalAlignment="Left" Margin="60,170,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="addressLine2Field" HorizontalAlignment="Left" Height="18" Margin="152,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Address Line 2" HorizontalAlignment="Left" Margin="60,201,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="355,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="postcodeField" HorizontalAlignment="Left" Height="18" Margin="355,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Postcode" HorizontalAlignment="Left" Margin="292,170,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="355,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="townCityField" HorizontalAlignment="Left" Height="18" Margin="355,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Town/City" HorizontalAlignment="Left" Margin="287,201,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfTextBoxExt HorizontalAlignment="Left" Height="18" Margin="152,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Watermark="" Width="120"/>
+        <syncfusion:SfTextBoxExt x:Name="mobileNumberField" HorizontalAlignment="Left" Height="18" Margin="152,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Watermark="" Width="120"/>
         <Label Content="Mobile Number" HorizontalAlignment="Left" Margin="53,232,0,0" VerticalAlignment="Top"/>
-        <syncfusion:SfDatePicker AllowNull="True" HorizontalAlignment="Left" Height="18" Margin="355,236,0,0" VerticalAlignment="Top" Watermark="Select Date" Width="120"/>
-        <Label Content="DOB" HorizontalAlignment="Left" Margin="315,232,0,0" VerticalAlignment="Top"/>
         <syncfusion:ButtonAdv Content="ConfirmDetails" Click="OnConfirmDetailsButtonClick" HorizontalAlignment="Center" Height="22" Label="Confirm Details" Margin="0,277,0,0" VerticalAlignment="Top" Width="123" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14"/>
+        <syncfusion:SfTextBoxExt x:Name="emailField" HorizontalAlignment="Left" Height="18" Margin="355,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="311,232,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

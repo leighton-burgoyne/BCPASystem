@@ -6,10 +6,8 @@
     <Grid>
         <Image Margin="109,15,109,245" Source="/Assets/BCPA_Logo.png"/>
         <Label Content="Admin Portal" FontSize="20" HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top"/>
-        <syncfusion:ButtonAdv Content="AdminMode" Click="OnUserModeButtonClick" HorizontalAlignment="Left" Height="22" Label="User Mode" Margin="405,15,0,0" VerticalAlignment="Top" Width="106" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14" IconStretch="None"/>
-        <Button Content="New Show" FontSize="20" HorizontalAlignment="Left" Margin="80,166,0,0" VerticalAlignment="Top" Height="51" Width="176" Background="#FF50E4FF" Click="OnNewShowButtonClick"/>
-        <Button Content="Edit Show" FontSize="20"  HorizontalAlignment="Left" Margin="262,166,0,0" VerticalAlignment="Top" Height="51" Width="176" Background="#FFFFA57B"/>
-        <Button Content="New Promotion" FontSize="20" HorizontalAlignment="Left" Margin="80,225,0,0" VerticalAlignment="Top" Height="52" Width="176" Background="#FFE7E873"/>
-        <Button Content="Edit Promotion" FontSize="20"  HorizontalAlignment="Left" Margin="262,225,0,0" VerticalAlignment="Top" Height="52" Width="176" Background="#FF79FF94"/>
+        <Button Content="New Show" FontSize="20" HorizontalAlignment="Center" Margin="0,173,0,0" VerticalAlignment="Top" Height="51" Width="176" Background="#FF50E4FF" Click="OnNewShowButtonClick"/>
+        <Button Content="New Promotion" Click="OnNewPromotionButtonClick"  FontSize="20" HorizontalAlignment="Center" Margin="0,232,0,0" VerticalAlignment="Top" Height="52" Width="176" Background="#FFE7E873"/>
+        <syncfusion:ButtonAdv Content="UserMode" Click="OnUserModeButtonClick" HorizontalAlignment="Left" Height="22" Label="User Mode" Margin="404,23,0,0" VerticalAlignment="Top" Width="106" SmallIcon="/Assets/favicon.ico" IconHeight="14" IconWidth="14" IconStretch="None"/>
     </Grid>
 </Page>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -70,8 +71,8 @@ namespace BCPASystem
 		/// <summary>
         /// Called when [loaded].
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param Name="sender">The sender.</param>
+        /// <param Name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             CurrentVisualStyle = "Windows11Light";
@@ -110,8 +111,18 @@ namespace BCPASystem
         }
         private void OnConfirmDetailsButtonClick(object sender, RoutedEventArgs e)
         {
-            // To add 'if' criteria to ensure that all fields met before confirmation (input validation)
-            // To add code to add details to the list / database (storage)
+            CustomerInfo.Customers.Add(new Customer()
+            {
+                FirstName = firstNameField.Text,
+                LastName = lastNameField.Text,
+                AddressLine1 = addressLine1Field.Text,
+                AddressLine2 = addressLine2Field.Text,
+                Postcode = postcodeField.Text,
+                City = townCityField.Text,
+                MobileNumber = mobileNumberField.Text,
+                Email = emailField.Text,
+            });
+            Trace.WriteLine(CustomerInfo.Customers);
             SelectShow page = new SelectShow();
             NavigationService.Navigate(page);
         }

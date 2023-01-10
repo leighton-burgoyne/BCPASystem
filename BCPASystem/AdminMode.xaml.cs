@@ -70,8 +70,8 @@ namespace BCPASystem
 		/// <summary>
         /// Called when [loaded].
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param Name="sender">The sender.</param>
+        /// <param Name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             CurrentVisualStyle = "Windows11Light";
@@ -117,6 +117,11 @@ namespace BCPASystem
         private void OnNewShowButtonClick(object sender, RoutedEventArgs e)
         {
             NewShow page = new NewShow();
+            NavigationService.Navigate(page);
+        }
+        private void OnNewPromotionButtonClick(object sender, RoutedEventArgs e)
+        {
+            NewPromotion page = new NewPromotion();
             NavigationService.Navigate(page);
         }
     }

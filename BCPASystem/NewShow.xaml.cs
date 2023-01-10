@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,7 +23,7 @@ namespace BCPASystem
     /// </summary>
     public partial class NewShow : Page
     {
-		#region Fields
+        #region Fields
         private string currentVisualStyle;
 		private string currentSizeMode;
         #endregion
@@ -70,8 +73,8 @@ namespace BCPASystem
 		/// <summary>
         /// Called when [loaded].
         /// </summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param Name="sender">The sender.</param>
+        /// <param Name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             CurrentVisualStyle = "Windows11Light";
@@ -107,6 +110,23 @@ namespace BCPASystem
                 SfSkinManager.SetSizeMode(this, sizeMode);
                 SfSkinManager.ApplyStylesOnApplication = false;
             }
+        }
+        public void OnCreateShowButtonClick(object sender, RoutedEventArgs e)
+        {
+            ShowInfo.Shows.Add(new Show()
+            {
+                Name = ShowNameField.Text,
+                Description = InfoField.Text,
+                ShowDate = StartDateField.Value.ToString(),
+                ShowTime = StartTimeField.Value.ToString(),
+                Venue = VenueField.Text,
+                Organiser = OrganiserField.Text,
+                Promotion = PromotionField.Text,
+                Duration = int.Parse(DurationField.Text),
+                Capacity = int.Parse(CapacityField.Text),
+            });
+            SelectShow page = new SelectShow();
+            NavigationService.Navigate(page);
         }
     }
 }
